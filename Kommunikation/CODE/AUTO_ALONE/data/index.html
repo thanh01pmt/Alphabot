@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Alphabot 2.0 Control</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<script src="virtualjoystick.js"></script>
+	<style type="text/css">
+		body {
+			overflow: hidden;
+			position: fixed;
+			padding: 0;
+			margin: 0;
+			background-color: #BBB;
+			width: 100vw;
+			height: 100vh;
+    		-webkit-user-select: none;
+    		-moz-user-select: none;
+    		-ms-user-select: none;
+    		user-select: none;  
+		}
+	</style>
+</head>
+<body>
+	<h1 id="title">Alphabot 2.0 Control</h1>
+	
+	<br>
+	<span id="display">Not Connected</span>
+	<span id="result"></span>
+	<span id="message">Message</span>
+	<script type="text/javascript">
+		var ws = new WebSocket("ws://auto.local/ws");
+		var title = document.getElementById('title');
+		var colorcode = ['white', 'red', 'green', 'blue', 'yellow', 'magenta', 'cyan', '#ff8080', '#80ff80', '#8080ff'];
+		ws.onopen = function() {
+    		document.getElementById("display").innerHTML  = "Connected";
+		};
+		ws.onmessage = function(evt) {
+    		document.getElementById("message").innerHTML  = "DATA:" + evt.data;
+    		if (evt.data.slice(0, 1) == "Q") {
+    			if (evt.data.slice(1, 2) == "A") {
+    				title.style.color = colorcode[evt.data.slice(2, 3)];
+    			}
+    		}
+		};
+		var baseHost = document.location.origin
+    	console.log("touchscreen is", VirtualJoystick.touchScreenAvailable() ? "available" : "not available");
+	
+			var joystick	= new VirtualJoystick();
+			joystick.addEventListener('touchStart', function(){
+				console.log('down')
+			})
+			joystick.addEventListener('touchEnd', function(){
+				console.log('up')
+			})
+			setInterval(function(){
+				var outputEl	= document.getElementById('result');
+				ws.send("X:" + joystick.deltaX() + "Y:" + joystick.deltaY());
+				outputEl.innerHTML	= '<b>Result:</b> '
+					+ ' dx:'+joystick.deltaX()
+					+ ' dy:'+joystick.deltaY()
+					+ (joystick.right()	? ' right'	: '')
+					+ (joystick.up()	? ' up'		: '')
+					+ (joystick.left()	? ' left'	: '')
+					+ (joystick.down()	? ' down' 	: '')
+			}, 20);
+	</script>
+</body>
+</html>

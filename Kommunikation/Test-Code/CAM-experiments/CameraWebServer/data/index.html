@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<title>WebSocket Test</title>
+ 
+<script language="javascript" type="text/javascript">
+
+// Called whenever the HTML button is pressed
+function onPress() {
+    const query = `192.168.4.1/control.php?var=toggle`
+    fetch(query)
+      .then(response => {
+        console.log(`request to ${query} finished, status: ${response.status}`)
+      })
+}
+ 
+</script>
+ 
+<h2>LED Control</h2>
+ 
+<table>
+    <tr>
+        <td><button id="toggleButton" onclick="onPress()">Toggle LED</button></td>
+        <td><canvas id="led" width="50" height="50"></canvas></td>
+    </tr>
+</table>

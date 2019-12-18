@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EL-Parcour Master</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<style type="text/css">
+		body {
+			overflow	: hidden;
+			position: fixed;
+			padding		: 0;
+			margin		: 0;
+			background-color: #BBB;
+			width: 100%;
+			height: 100%;
+    		-webkit-user-select: none;
+    		-moz-user-select: none;
+    		-ms-user-select: none;
+    		user-select: none;  
+		}
+	</style>
+</head>
+<body>
+	<h1>EL-Parcour Master</h1>
+	<span id="display">Not Connected</span> <br>
+	<span id="message"></span><br>
+	<span id="debug1"></span><br>
+	<span id="debug2"></span>
+	<br>
+	<button id="auto0" class="autobutton" onclick="togglesperre(0)" style="height: 100px; width: 100px; background-color: white; border-color: red; border-width: 10px;" hidden>Auto 0</button>
+	<button id="auto1" class="autobutton" onclick="togglesperre(1)" style="height: 100px; width: 100px; background-color: red; border-color: red; border-width: 10px;" hidden> Auto 1</button>
+	<button id="auto2" class="autobutton" onclick="togglesperre(2)" style="height: 100px; width: 100px; background-color: green; border-color: red; border-width: 10px;" hidden> Auto 2</button>
+	<button id="auto3" class="autobutton" onclick="togglesperre(3)" style="height: 100px; width: 100px; background-color: blue; border-color: red; border-width: 10px;" hidden> Auto 3</button>
+	<button id="auto4" class="autobutton" onclick="togglesperre(4)" style="height: 100px; width: 100px; background-color: yellow; border-color: red; border-width: 10px;" hidden> Auto 4</button>
+	<button id="auto5" class="autobutton" onclick="togglesperre(5)" style="height: 100px; width: 100px; background-color: magenta; border-color: red; border-width: 10px;" hidden> Auto 5</button>
+	<button id="auto6" class="autobutton" onclick="togglesperre(6)" style="height: 100px; width: 100px; background-color: cyan; border-color: red; border-width: 10px;" hidden> Auto 6</button>
+	<button id="auto7" class="autobutton" onclick="togglesperre(7)" style="height: 100px; width: 100px; background-color: #ff8080; border-color: red; border-width: 10px;" hidden> Auto 7</button>
+	<button id="auto8" class="autobutton" onclick="togglesperre(8)" style="height: 100px; width: 100px; background-color: #80ff80; border-color: red; border-width: 10px;" hidden> Auto 8</button>
+	<button id="auto9" class="autobutton" onclick="togglesperre(9)" style="height: 100px; width: 100px; background-color: #8080ff; border-color: red; border-width: 10px;" hidden> Auto 9</button>
+
+	<script type="text/javascript">
+		var ws = new WebSocket("ws://master.local/ws");
+		var autobutton0 = document.getElementById("auto0");
+		var autobutton1 = document.getElementById("auto1");
+		var autobutton2 = document.getElementById("auto2");
+		var autobutton3 = document.getElementById("auto3");
+		var autobutton4 = document.getElementById("auto4");
+		var autobutton5 = document.getElementById("auto5");
+		var autobutton6 = document.getElementById("auto6");
+		var autobutton7 = document.getElementById("auto7");
+		var autobutton8 = document.getElementById("auto8");
+		var autobutton9 = document.getElementById("auto9");
+		var countc = 0;
+		var countd = 0;
+		var datad = 0;
+		var autosperre = ["red", "red", "red", "red", "red", "red", "red", "red", "red", "red"];
+		ws.onopen = function() {
+    		document.getElementById("display").innerHTML  = "Connected";
+		};
+		ws.onmessage = function(evt) {
+			evt.data += "A";
+    		document.getElementById("message").innerHTML  = "DATA: " + evt.data;
+	    	if (evt.data.slice(0, 1) == "Q") {
+	    		countc = evt.data.slice(1, 2);
+	    		if (countc != "0") {
+	    			for (var i = 0; i < parseInt(countc); i++) {
+		    			switch(evt.data.slice(i + 2, i + 3)) {
+			    			case "0":
+			    				autobutton0.hidden = false;
+			    				break;
+			    			case "1":
+			    				autobutton1.hidden = false;
+			    				break;
+			    			case "2":
+			    				autobutton2.hidden = false;
+			    				break;
+			    			case "3":
+			    				autobutton3.hidden = false;
+			    				break;
+			    			case "4":
+			    				autobutton4.hidden = false;
+			    				break;
+			    			case "5":
+			    				autobutton5.hidden = false;
+			    				break;
+			    			case "6":
+			    				autobutton6.hidden = false;
+			    				break;
+			    			case "7":
+			    				autobutton7.hidden = false;
+			    				break;
+			    			case "8":
+			    				autobutton8.hidden = false;
+			    				break;
+			    			case "9":
+			    				autobutton9.hidden = false;
+			    				break;
+			    			
+			    		}
+		    		}
+	    		}
+	    		countd = evt.data.slice(2 + parseInt(countc), 3 + parseInt(countc));
+	    		if (countd != "0") {
+	    			for (var i = 0; i < parseInt(countd); i++) {
+		    			switch(evt.data.slice(i + parseInt(countc) + 3, i + parseInt(countc) + 4)) {
+			    			case "0":
+			    				autobutton0.hidden = true;
+			    				autosperre[0] = "red";
+			    				break;
+			    			case "1":
+			    				autobutton1.hidden = true;
+			    				autosperre[1] = "red";
+			    				break;
+			    			case "2":
+			    				autobutton2.hidden = true;
+			    				autosperre[2] = "red";
+			    				break;
+			    			case "3":
+			    				autobutton3.hidden = true;
+			    				autosperre[3] = "red";
+			    				break;
+			    			case "4":
+			    				autobutton4.hidden = true;
+			    				autosperre[4] = "red";
+			    				break;
+			    			case "5":
+			    				autobutton5.hidden = true;
+			    				autosperre[5] = "red";
+			    				break;
+			    			case "6":
+			    				autobutton6.hidden = true;
+			    				autosperre[6] = "red";
+			    				break;
+			    			case "7":
+			    				autobutton7.hidden = true;
+			    				autosperre[7] = "red";
+			    				break;
+			    			case "8":
+			    				autobutton8.hidden = true;
+			    				autosperre[8] = "red";
+			    				break;
+			    			case "9":
+			    				autobutton9.hidden = true;
+			    				autosperre[9] = "red";
+			    				break;
+			    		}
+		    		}
+	    		}
+    		} else if (evt.data.slice(0, 1) == "T") {
+    			if (evt.data.slice(2, 3) == "S") {
+    				autosperre[evt.data.slice(1, 2)] = "red";
+    			} else if (evt.data.slice(2, 3) == "F") {
+    				autosperre[evt.data.slice(1, 2)] = "green";
+    			}
+    		}
+    		for (var i = 0; i < autosperre.length; i++) {
+    			if (autosperre[i] == "red") {
+    				document.getElementById("auto" + i).style.borderColor = "red";
+    			} else if (autosperre[i] == "green") {
+    				document.getElementById("auto" + i).style.borderColor = "green";
+    			}
+    		}
+		};
+		setInterval(function(){
+			ws.send("Q");
+		}, 1000);
+
+		function togglesperre(auto) {
+			ws.send("T" + auto);
+		}
+		
+	</script>
+</body>
+</html>
