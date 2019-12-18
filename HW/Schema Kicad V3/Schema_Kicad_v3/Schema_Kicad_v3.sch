@@ -1,0 +1,1215 @@
+EESchema Schematic File Version 4
+LIBS:Schema_Kicad_v3-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 9
+Title "Alphabot 2.3"
+Date "2019-12-17"
+Rev "1.0"
+Comp "PSI"
+Comment1 "DM13"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text GLabel 2450 1050 0    50   Input ~ 0
+Rx_Arduino
+Text GLabel 2450 1200 0    50   Input ~ 0
+Tx_Arduino
+Wire Wire Line
+	2500 1050 2450 1050
+Wire Wire Line
+	2450 1200 2500 1200
+$Sheet
+S 2500 750  1000 2800
+U 5DF1261C
+F0 "Arduino" 50
+F1 "Arduino.sch" 50
+F2 "Rx" I L 2500 1050 50 
+F3 "Tx" I L 2500 1200 50 
+F4 "Reset" I L 2500 1350 50 
+F5 "D13SCK" I L 2500 1500 50 
+F6 "D12MISO" I L 2500 1600 50 
+F7 "D11MOSI" I L 2500 1700 50 
+F8 "D10" I L 2500 1800 50 
+F9 "D9" I L 2500 1900 50 
+F10 "D8" I L 2500 2000 50 
+F11 "A0" I L 2500 2750 50 
+F12 "A1" I L 2500 2850 50 
+F13 "A2" I L 2500 2950 50 
+F14 "A3" I L 2500 3050 50 
+F15 "A4" I L 2500 3150 50 
+F16 "A5" I L 2500 3250 50 
+F17 "A6" I L 2500 3350 50 
+F18 "A7" I L 2500 3450 50 
+F19 "D2" I L 2500 2600 50 
+F20 "D3" I L 2500 2500 50 
+F21 "D4" I L 2500 2400 50 
+F22 "D5" I L 2500 2300 50 
+F23 "D6" I L 2500 2200 50 
+F24 "D7" I L 2500 2100 50 
+$EndSheet
+$Sheet
+S 6700 750  1000 3400
+U 5DF4CDE7
+F0 "ESP32" 50
+F1 "ESP32.sch" 50
+F2 "IO0_boot" I L 6700 900 50 
+F3 "Tx_Wroom" I L 6700 1000 50 
+F4 "IO2_ADC2_2" I L 6700 1100 50 
+F5 "Rx_Wroom" I L 6700 1200 50 
+F6 "IO4_ADC2_0" I L 6700 1300 50 
+F7 "IO5" I L 6700 1400 50 
+F8 "O12_ADC_5" I L 6700 2100 50 
+F9 "IO13_ADC2_4" I L 6700 2200 50 
+F10 "IO14_ADC2_6" I L 6700 2300 50 
+F11 "IO15_ADC2_3" I L 6700 2400 50 
+F12 "IO16" I L 6700 2500 50 
+F13 "IO17" I L 6700 2600 50 
+F14 "IO18" I L 6700 2700 50 
+F15 "IO19" I L 6700 2800 50 
+F16 "IO21" I L 6700 2900 50 
+F17 "IO22" I L 6700 3000 50 
+F18 "IO23" I L 6700 3100 50 
+F19 "IO25_ADC2_8_DAC1" I L 6700 3200 50 
+F20 "IO26_ADC2_9_DAC2" I L 6700 3300 50 
+F21 "IO27_ADC2_7" I L 6700 3400 50 
+F22 "IO32_ADC1_4" I L 6700 3500 50 
+F23 "IO33_ADC1_5" I L 6700 3600 50 
+F24 "I34_ADC1_6" I L 6700 3700 50 
+F25 "I35_ADC1_7" I L 6700 3800 50 
+F26 "7_SD0" I L 6700 1600 50 
+F27 "8_SD1" I L 6700 1700 50 
+F28 "9_DS2" I L 6700 1800 50 
+F29 "10_SD3" I L 6700 1900 50 
+F30 "6_CLK" I L 6700 1500 50 
+F31 "11_CMD" I L 6700 2000 50 
+F32 "I36_ADC1_0" I L 6700 3900 50 
+F33 "I39_ADC1_3" I L 6700 4000 50 
+$EndSheet
+$Sheet
+S 4200 750  550  1250
+U 5DF3B709
+F0 "Motortreiber" 50
+F1 "Motortreiber.sch" 50
+F2 "AO1" I L 4200 850 50 
+F3 "AO2" I L 4200 950 50 
+F4 "BO1" I L 4200 1050 50 
+F5 "BO2" I L 4200 1150 50 
+F6 "STBY" I L 4200 1250 50 
+F7 "PWMA" I L 4200 1350 50 
+F8 "PWMB" I L 4200 1450 50 
+F9 "AIN1" I L 4200 1550 50 
+F10 "AIN2" I L 4200 1650 50 
+F11 "BIN1" I L 4200 1750 50 
+F12 "BIN2" I L 4200 1850 50 
+$EndSheet
+$Sheet
+S 5400 750  550  700 
+U 5DF4B781
+F0 "USB_to_UART" 50
+F1 "USB_to_UART.sch" 50
+F2 "Rx_Wroom" I L 5400 850 50 
+F3 "Rx_Arduino" I L 5400 950 50 
+F4 "Tx_Wroom" I L 5400 1050 50 
+F5 "Tx_Arduino" I L 5400 1150 50 
+F6 "D+" I L 5400 1250 50 
+F7 "D-" I L 5400 1350 50 
+$EndSheet
+Text GLabel 5300 950  0    50   Input ~ 0
+Rx_Arduino
+Text GLabel 5300 1150 0    50   Input ~ 0
+Tx_Arduino
+Wire Wire Line
+	5300 950  5400 950 
+Wire Wire Line
+	5400 1150 5300 1150
+Text GLabel 5300 850  0    50   Input ~ 0
+Rx_Wroom
+Text GLabel 5300 1050 0    50   Input ~ 0
+Tx_Wrooom
+Wire Wire Line
+	5400 850  5300 850 
+Wire Wire Line
+	5300 1050 5400 1050
+Text GLabel 6600 1200 0    50   Input ~ 0
+Rx_Wroom
+Text GLabel 6600 1000 0    50   Input ~ 0
+Tx_Wrooom
+Wire Wire Line
+	6700 1000 6600 1000
+Wire Wire Line
+	6600 1200 6700 1200
+Text GLabel 2450 3150 0    50   Input ~ 0
+SDA_5V
+Text GLabel 2450 3250 0    50   Input ~ 0
+SCL_5V
+Wire Wire Line
+	2450 3150 2500 3150
+Wire Wire Line
+	2450 3250 2500 3250
+Text GLabel 2450 1350 0    50   Input ~ 0
+USELESS
+Text GLabel 1950 1500 0    50   Input ~ 0
+ATmega_TestLED*D13SCK
+Wire Wire Line
+	2450 1350 2500 1350
+Wire Wire Line
+	1950 1500 2000 1500
+Wire Wire Line
+	2000 1500 2000 1450
+Wire Wire Line
+	2000 1450 2450 1450
+Wire Wire Line
+	2450 1450 2450 1500
+Wire Wire Line
+	2500 1500 2450 1500
+Wire Wire Line
+	2450 1600 2500 1600
+Wire Wire Line
+	2450 1700 2500 1700
+Wire Wire Line
+	2500 1800 2450 1800
+Wire Wire Line
+	2450 1900 2500 1900
+Wire Wire Line
+	2500 2000 2450 2000
+Wire Wire Line
+	2450 2100 2500 2100
+Wire Wire Line
+	2500 2200 2450 2200
+$Comp
+L Logic_LevelTranslator:TXB0108DQSR U?
+U 1 1 5DF7DE97
+P 2450 5950
+F 0 "U?" H 2450 5161 50  0000 C CNN
+F 1 "TXB0108DQSR" H 2450 5070 50  0000 C CNN
+F 2 "Package_SON:USON-20_2x4mm_P0.4mm" H 2450 5200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/txb0108.pdf" H 2450 5850 50  0001 C CNN
+	1    2450 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Logic_LevelTranslator:TXB0108DQSR U?
+U 1 1 5DF7ECC5
+P 4600 5950
+F 0 "U?" H 4600 5161 50  0000 C CNN
+F 1 "TXB0108DQSR" H 4600 5070 50  0000 C CNN
+F 2 "Package_SON:USON-20_2x4mm_P0.4mm" H 4600 5200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/txb0108.pdf" H 4600 5850 50  0001 C CNN
+	1    4600 5950
+	1    0    0    -1  
+$EndComp
+Text GLabel 2450 2500 0    50   Input ~ 0
+Not_used
+Text GLabel 1950 6350 0    50   Input ~ 0
+BEW_CS_3V3
+Text GLabel 1950 6250 0    50   Input ~ 0
+UMW_CS_3V3
+Text GLabel 1950 6150 0    50   Input ~ 0
+IOE2_CS_3V3
+Text GLabel 2950 6350 2    50   Input ~ 0
+BEW_CS_5V
+Text GLabel 2950 6250 2    50   Input ~ 0
+UMW_CS_5V
+Text GLabel 2950 6150 2    50   Input ~ 0
+IOE2_CS_5V
+Text GLabel 2950 6050 2    50   Input ~ 0
+IOE1_CS_5V
+Text GLabel 2950 5950 2    50   Input ~ 0
+uC_CS_5V
+Text GLabel 2950 5850 2    50   Input ~ 0
+MOSI_5V
+Text GLabel 2950 5750 2    50   Input ~ 0
+MISO_5V
+Text GLabel 2950 5650 2    50   Input ~ 0
+SCLK_5V
+Text GLabel 5100 5650 2    50   Input ~ 0
+WS2812b_5V
+Text GLabel 2450 2600 0    50   Input ~ 0
+US1_5V
+Text GLabel 2450 2750 0    50   Input ~ 0
+EMPF_L
+$Sheet
+S 4200 2300 550  900 
+U 5DFBAF76
+F0 "IR" 50
+F1 "IR.sch" 50
+F2 "Empf_L" I L 4200 2400 50 
+F3 "Empf_M" I L 4200 2500 50 
+F4 "Empf_R" I L 4200 2600 50 
+F5 "Send_R" I L 4200 2700 50 
+F6 "Send_M" I L 4200 2800 50 
+F7 "Send_L" I L 4200 2900 50 
+F8 "Empf_H" I L 4200 3000 50 
+$EndSheet
+Wire Wire Line
+	4200 2400 4150 2400
+Text GLabel 2450 2850 0    50   Input ~ 0
+EMPF_M
+Text GLabel 2450 2950 0    50   Input ~ 0
+EMPF_R
+Text GLabel 2450 3050 0    50   Input ~ 0
+EMPF_H
+Wire Wire Line
+	2450 2300 2500 2300
+Wire Wire Line
+	2450 2400 2500 2400
+Wire Wire Line
+	2450 2500 2500 2500
+Wire Wire Line
+	2450 2600 2500 2600
+Wire Wire Line
+	2450 2750 2500 2750
+Wire Wire Line
+	2450 2850 2500 2850
+Wire Wire Line
+	2450 2950 2500 2950
+Wire Wire Line
+	2450 3050 2500 3050
+Text GLabel 2450 3350 0    50   Input ~ 0
+US2_5V
+Text GLabel 2450 3450 0    50   Input ~ 0
+LICHT
+Wire Wire Line
+	2450 3350 2500 3350
+Wire Wire Line
+	2500 3450 2450 3450
+Wire Wire Line
+	2850 5650 2950 5650
+Wire Wire Line
+	2950 5750 2850 5750
+Wire Wire Line
+	2850 5850 2950 5850
+Wire Wire Line
+	2850 5950 2950 5950
+Wire Wire Line
+	2950 6050 2850 6050
+Wire Wire Line
+	2850 6150 2950 6150
+Wire Wire Line
+	2950 6250 2850 6250
+Wire Wire Line
+	2850 6350 2950 6350
+Wire Wire Line
+	2050 5650 1950 5650
+Wire Wire Line
+	1950 5750 2050 5750
+Wire Wire Line
+	2050 5850 1950 5850
+Wire Wire Line
+	1950 5950 2050 5950
+Wire Wire Line
+	2050 6050 1950 6050
+Wire Wire Line
+	1950 6150 2050 6150
+Wire Wire Line
+	2050 6250 1950 6250
+Wire Wire Line
+	1950 6350 2050 6350
+$Comp
+L power:GND #PWR?
+U 1 1 5DFEC792
+P 2850 6650
+F 0 "#PWR?" H 2850 6400 50  0001 C CNN
+F 1 "GND" H 2855 6477 50  0000 C CNN
+F 2 "" H 2850 6650 50  0001 C CNN
+F 3 "" H 2850 6650 50  0001 C CNN
+	1    2850 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5DFECDF7
+P 2550 5200
+F 0 "#PWR?" H 2550 5050 50  0001 C CNN
+F 1 "+5V" H 2565 5373 50  0000 C CNN
+F 2 "" H 2550 5200 50  0001 C CNN
+F 3 "" H 2550 5200 50  0001 C CNN
+	1    2550 5200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5DFECF87
+P 2350 5200
+F 0 "#PWR?" H 2350 5050 50  0001 C CNN
+F 1 "+3V3" H 2365 5373 50  0000 C CNN
+F 2 "" H 2350 5200 50  0001 C CNN
+F 3 "" H 2350 5200 50  0001 C CNN
+	1    2350 5200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 5200 2550 5250
+Wire Wire Line
+	2350 5250 2350 5200
+Wire Wire Line
+	2850 6650 2450 6650
+$Comp
+L power:GND #PWR?
+U 1 1 5DFF3054
+P 5050 6650
+F 0 "#PWR?" H 5050 6400 50  0001 C CNN
+F 1 "GND" H 5055 6477 50  0000 C CNN
+F 2 "" H 5050 6650 50  0001 C CNN
+F 3 "" H 5050 6650 50  0001 C CNN
+	1    5050 6650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 6650 4600 6650
+$Comp
+L power:+5V #PWR?
+U 1 1 5DFF6629
+P 4700 5200
+F 0 "#PWR?" H 4700 5050 50  0001 C CNN
+F 1 "+5V" H 4715 5373 50  0000 C CNN
+F 2 "" H 4700 5200 50  0001 C CNN
+F 3 "" H 4700 5200 50  0001 C CNN
+	1    4700 5200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5DFF662F
+P 4500 5200
+F 0 "#PWR?" H 4500 5050 50  0001 C CNN
+F 1 "+3V3" H 4515 5373 50  0000 C CNN
+F 2 "" H 4500 5200 50  0001 C CNN
+F 3 "" H 4500 5200 50  0001 C CNN
+	1    4500 5200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 5200 4700 5250
+Wire Wire Line
+	4500 5250 4500 5200
+Wire Wire Line
+	5000 5650 5100 5650
+Wire Wire Line
+	5100 5750 5000 5750
+Wire Wire Line
+	5000 5850 5100 5850
+Wire Wire Line
+	5100 5950 5000 5950
+Wire Wire Line
+	4200 5650 4100 5650
+Wire Wire Line
+	4100 5750 4200 5750
+Wire Wire Line
+	4200 5850 4100 5850
+Wire Wire Line
+	4200 5950 4100 5950
+Wire Wire Line
+	4200 2500 4150 2500
+Wire Wire Line
+	4150 2600 4200 2600
+Wire Wire Line
+	4200 3000 4150 3000
+Wire Wire Line
+	5000 6050 5100 6050
+Wire Wire Line
+	5100 6150 5000 6150
+Wire Wire Line
+	5000 6250 5100 6250
+Wire Wire Line
+	5100 6350 5000 6350
+Wire Wire Line
+	4100 6050 4200 6050
+Wire Wire Line
+	4200 6150 4100 6150
+Wire Wire Line
+	4100 6250 4200 6250
+Wire Wire Line
+	4200 6350 4100 6350
+Wire Wire Line
+	2050 5550 2050 5250
+Wire Wire Line
+	2050 5250 2350 5250
+Connection ~ 2350 5250
+Wire Wire Line
+	4200 5550 4200 5250
+Wire Wire Line
+	4200 5250 4500 5250
+Connection ~ 4500 5250
+$Comp
+L Interface_Expansion:MCP23S17_SS U?
+U 1 1 5DFBB9BE
+P 9600 2000
+F 0 "U?" H 9600 3281 50  0000 C CNN
+F 1 "MCP23S17_SS" H 9600 3190 50  0000 C CNN
+F 2 "Package_SO:SSOP-28_5.3x10.2mm_P0.65mm" H 9800 1000 50  0001 L CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001952C.pdf" H 9800 900 50  0001 L CNN
+	1    9600 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Interface_Expansion:MCP23S17_SS U?
+U 1 1 5DFBC684
+P 9600 4850
+F 0 "U?" H 9600 6131 50  0000 C CNN
+F 1 "MCP23S17_SS" H 9600 6040 50  0000 C CNN
+F 2 "Package_SO:SSOP-28_5.3x10.2mm_P0.65mm" H 9800 3850 50  0001 L CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001952C.pdf" H 9800 3750 50  0001 L CNN
+	1    9600 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DFD763C
+P 9600 6000
+F 0 "#PWR?" H 9600 5750 50  0001 C CNN
+F 1 "GND" H 9605 5827 50  0000 C CNN
+F 2 "" H 9600 6000 50  0001 C CNN
+F 3 "" H 9600 6000 50  0001 C CNN
+	1    9600 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 6000 9600 5950
+$Comp
+L power:GND #PWR?
+U 1 1 5DFDA2D2
+P 9600 3200
+F 0 "#PWR?" H 9600 2950 50  0001 C CNN
+F 1 "GND" H 9605 3027 50  0000 C CNN
+F 2 "" H 9600 3200 50  0001 C CNN
+F 3 "" H 9600 3200 50  0001 C CNN
+	1    9600 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 3200 9600 3100
+Wire Wire Line
+	10000 900  9600 900 
+Wire Wire Line
+	10000 3750 9600 3750
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5DFE50F1
+P 10000 900
+F 0 "#PWR?" H 10000 750 50  0001 C CNN
+F 1 "+3V3" H 10015 1073 50  0000 C CNN
+F 2 "" H 10000 900 50  0001 C CNN
+F 3 "" H 10000 900 50  0001 C CNN
+	1    10000 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5DFE8991
+P 10000 3750
+F 0 "#PWR?" H 10000 3600 50  0001 C CNN
+F 1 "+3V3" H 10015 3923 50  0000 C CNN
+F 2 "" H 10000 3750 50  0001 C CNN
+F 3 "" H 10000 3750 50  0001 C CNN
+	1    10000 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5DFEC5BF
+P 8700 5100
+F 0 "#PWR?" H 8700 4950 50  0001 C CNN
+F 1 "+3V3" H 8715 5273 50  0000 C CNN
+F 2 "" H 8700 5100 50  0001 C CNN
+F 3 "" H 8700 5100 50  0001 C CNN
+	1    8700 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5DFED11B
+P 8750 2300
+F 0 "#PWR?" H 8750 2150 50  0001 C CNN
+F 1 "+3V3" H 8765 2473 50  0000 C CNN
+F 2 "" H 8750 2300 50  0001 C CNN
+F 3 "" H 8750 2300 50  0001 C CNN
+	1    8750 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 2300 8900 2300
+Wire Wire Line
+	8900 2300 8900 2100
+Wire Wire Line
+	8700 5100 8900 5100
+Wire Wire Line
+	8900 5100 8900 4950
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5DFF3FE8
+P 8650 2900
+F 0 "#PWR?" H 8650 2750 50  0001 C CNN
+F 1 "+3V3" H 8665 3073 50  0000 C CNN
+F 2 "" H 8650 2900 50  0001 C CNN
+F 3 "" H 8650 2900 50  0001 C CNN
+	1    8650 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DFF4BB1
+P 8650 2450
+F 0 "#PWR?" H 8650 2200 50  0001 C CNN
+F 1 "GND" H 8655 2277 50  0000 C CNN
+F 2 "" H 8650 2450 50  0001 C CNN
+F 3 "" H 8650 2450 50  0001 C CNN
+	1    8650 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 2450 8900 2450
+Wire Wire Line
+	8900 2450 8900 2600
+Connection ~ 8900 2600
+Wire Wire Line
+	8900 2600 8900 2700
+Wire Wire Line
+	8900 2800 8900 2900
+Wire Wire Line
+	8900 2900 8650 2900
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5DFFE1CD
+P 8650 5550
+F 0 "#PWR?" H 8650 5400 50  0001 C CNN
+F 1 "+3V3" H 8665 5723 50  0000 C CNN
+F 2 "" H 8650 5550 50  0001 C CNN
+F 3 "" H 8650 5550 50  0001 C CNN
+	1    8650 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DFFE1D3
+P 8450 5550
+F 0 "#PWR?" H 8450 5300 50  0001 C CNN
+F 1 "GND" H 8455 5377 50  0000 C CNN
+F 2 "" H 8450 5550 50  0001 C CNN
+F 3 "" H 8450 5550 50  0001 C CNN
+	1    8450 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 5550 8650 5550
+Wire Wire Line
+	8450 5550 8550 5550
+Wire Wire Line
+	8550 5550 8550 5650
+Wire Wire Line
+	8550 5650 8900 5650
+Wire Wire Line
+	8900 5450 8850 5450
+Wire Wire Line
+	8850 5450 8850 5300
+Wire Wire Line
+	8850 5300 8450 5300
+Wire Wire Line
+	8450 5300 8450 5550
+Connection ~ 8450 5550
+NoConn ~ 8900 1800
+NoConn ~ 8900 1900
+NoConn ~ 8900 4750
+NoConn ~ 8900 4650
+Text Notes 2250 7600 0    50   ~ 0
+1: SCK\n2: MISO\n3: MOSI\n4: Microcontroller\n5: IO Expander 1\n6: IO Expander 2\n7: Umwelt\n8: Bewegung
+Wire Notes Line
+	2200 6900 2200 7650
+Wire Notes Line
+	2200 7650 2950 7650
+Wire Notes Line
+	2950 7650 2950 6900
+Wire Notes Line
+	2950 6900 2200 6900
+Text Notes 4350 7550 0    50   ~ 0
+1: WS2812b\n2: Piezo\n3: Ultraschall 1\n4: Ultraschall 2\n5: SDA\n6: SCL\n7:\n8:\n
+Text GLabel 6600 900  0    50   Input ~ 0
+USELESS
+Wire Wire Line
+	6700 900  6600 900 
+Text GLabel 6600 1100 0    50   Input ~ 0
+USELESS
+Wire Wire Line
+	6700 1100 6600 1100
+Text GLabel 6600 1400 0    50   Input ~ 0
+uC_CS_3V3
+Text GLabel 6600 1500 0    50   Input ~ 0
+USELESS
+Text GLabel 6600 1600 0    50   Input ~ 0
+USELESS
+Text GLabel 6600 1700 0    50   Input ~ 0
+USELESS
+Text GLabel 6600 1800 0    50   Input ~ 0
+USELESS
+Text GLabel 6600 1900 0    50   Input ~ 0
+USELESS
+Text GLabel 6600 2000 0    50   Input ~ 0
+USELESS
+Text GLabel 6600 2700 0    50   Input ~ 0
+SCLK_3V3
+Text GLabel 6600 3200 0    50   Input ~ 0
+Not_used
+Text GLabel 6600 3300 0    50   Input ~ 0
+Not_used
+Text GLabel 6600 3500 0    50   Input ~ 0
+US1_3V3
+Text GLabel 6600 3600 0    50   Input ~ 0
+US2_3V3
+Text GLabel 6600 3700 0    50   Input ~ 0
+Not_used
+Text GLabel 6600 3800 0    50   Input ~ 0
+Not_used
+Text GLabel 6600 3900 0    50   Input ~ 0
+Not_used
+Text GLabel 6600 4000 0    50   Input ~ 0
+Not_used
+Text GLabel 6600 2100 0    50   Input ~ 0
+Not_used
+Text GLabel 6600 2200 0    50   Input ~ 0
+Not_used
+Wire Wire Line
+	6700 1300 6600 1300
+Wire Wire Line
+	6600 1400 6700 1400
+Wire Wire Line
+	6700 1500 6600 1500
+Wire Wire Line
+	6600 1600 6700 1600
+Wire Wire Line
+	6700 1700 6600 1700
+Wire Wire Line
+	6600 1800 6700 1800
+Wire Wire Line
+	6700 1900 6600 1900
+Wire Wire Line
+	6600 2000 6700 2000
+Wire Wire Line
+	6700 2100 6600 2100
+Wire Wire Line
+	6600 2200 6700 2200
+Wire Wire Line
+	6700 2300 6600 2300
+Wire Wire Line
+	6600 2400 6700 2400
+Wire Wire Line
+	6700 2500 6600 2500
+Wire Wire Line
+	6600 2600 6700 2600
+Wire Wire Line
+	6700 2700 6600 2700
+Wire Wire Line
+	6600 2800 6700 2800
+Wire Wire Line
+	6600 3100 6700 3100
+Wire Wire Line
+	6700 3200 6600 3200
+Wire Wire Line
+	6600 3300 6700 3300
+Wire Wire Line
+	6700 3400 6600 3400
+Wire Wire Line
+	6600 3500 6700 3500
+Wire Wire Line
+	6700 3600 6600 3600
+Wire Wire Line
+	6600 3700 6700 3700
+Wire Wire Line
+	6700 3800 6600 3800
+Wire Wire Line
+	6600 3900 6700 3900
+Wire Wire Line
+	6700 4000 6600 4000
+Text GLabel 10400 1200 2    50   Input ~ 0
+OK-Taster
+Text GLabel 10400 1300 2    50   Input ~ 0
+UP-Taster
+Text GLabel 10400 1400 2    50   Input ~ 0
+DOWN-Taster
+Text GLabel 10400 1500 2    50   Input ~ 0
+Send_L
+Text GLabel 10400 1600 2    50   Input ~ 0
+Send_M
+Text GLabel 10400 1700 2    50   Input ~ 0
+Send_R
+Text GLabel 10400 1800 2    50   Input ~ 0
+Not_used
+Text GLabel 10400 1900 2    50   Input ~ 0
+Not_used
+Text GLabel 10400 2100 2    50   Input ~ 0
+DIP1
+Text GLabel 10400 2200 2    50   Input ~ 0
+DIP2
+Text GLabel 10400 2300 2    50   Input ~ 0
+DIP3
+Text GLabel 10400 2400 2    50   Input ~ 0
+DIP4
+Text GLabel 10400 2500 2    50   Input ~ 0
+DIP5
+Text GLabel 10400 2600 2    50   Input ~ 0
+DIP6
+Text GLabel 10400 2700 2    50   Input ~ 0
+DIP7
+Text GLabel 10400 2800 2    50   Input ~ 0
+DIP8
+Wire Wire Line
+	10300 1200 10400 1200
+Wire Wire Line
+	10300 1300 10400 1300
+Wire Wire Line
+	10400 1400 10300 1400
+Wire Wire Line
+	10300 1500 10400 1500
+Wire Wire Line
+	10400 1600 10300 1600
+Wire Wire Line
+	10300 1700 10400 1700
+Wire Wire Line
+	10400 1800 10300 1800
+Wire Wire Line
+	10300 1900 10400 1900
+Wire Wire Line
+	10400 2100 10300 2100
+Wire Wire Line
+	10300 2200 10400 2200
+Wire Wire Line
+	10400 2300 10300 2300
+Wire Wire Line
+	10300 2400 10400 2400
+Wire Wire Line
+	10400 2500 10300 2500
+Wire Wire Line
+	10300 2600 10400 2600
+Wire Wire Line
+	10400 2700 10300 2700
+Wire Wire Line
+	10300 2800 10400 2800
+Text GLabel 10400 4050 2    50   Input ~ 0
+STBY
+Text GLabel 10400 4150 2    50   Input ~ 0
+PWMA
+Text GLabel 10400 4250 2    50   Input ~ 0
+AIN1
+Text GLabel 10400 4350 2    50   Input ~ 0
+AIN2
+Text GLabel 10400 4450 2    50   Input ~ 0
+PWMB
+Text GLabel 10400 4550 2    50   Input ~ 0
+BIN1
+Text GLabel 10400 4650 2    50   Input ~ 0
+BIN2
+Text GLabel 10400 4750 2    50   Input ~ 0
+LOW-BAT
+Text GLabel 10400 4950 2    50   Input ~ 0
+MUND1
+Text GLabel 10400 5050 2    50   Input ~ 0
+MUND2
+Text GLabel 10400 5150 2    50   Input ~ 0
+MUND3
+Text GLabel 10400 5250 2    50   Input ~ 0
+MUND4
+Text GLabel 10400 5350 2    50   Input ~ 0
+MUND5
+Text GLabel 10400 5450 2    50   Input ~ 0
+MUND6
+Text GLabel 10400 5550 2    50   Input ~ 0
+MUND7
+Text GLabel 10400 5650 2    50   Input ~ 0
+MUND8
+Wire Wire Line
+	10400 4050 10300 4050
+Wire Wire Line
+	10300 4150 10400 4150
+Wire Wire Line
+	10400 4250 10300 4250
+Wire Wire Line
+	10300 4350 10400 4350
+Wire Wire Line
+	10400 4450 10300 4450
+Wire Wire Line
+	10300 4550 10400 4550
+Wire Wire Line
+	10400 4650 10300 4650
+Wire Wire Line
+	10400 4750 10300 4750
+Wire Wire Line
+	10300 4950 10400 4950
+Wire Wire Line
+	10400 5050 10300 5050
+Wire Wire Line
+	10300 5150 10400 5150
+Wire Wire Line
+	10400 5250 10300 5250
+Wire Wire Line
+	10300 5350 10400 5350
+Wire Wire Line
+	10400 5450 10300 5450
+Wire Wire Line
+	10300 5550 10400 5550
+Wire Wire Line
+	10400 5650 10300 5650
+Text GLabel 6600 2600 0    50   Input ~ 0
+IOE1_CS_3V3
+Text GLabel 6600 2800 0    50   Input ~ 0
+MISO_3V3
+Text GLabel 6600 3100 0    50   Input ~ 0
+MOSI_3V3
+Text GLabel 1950 6050 0    50   Input ~ 0
+IOE1_CS_3V3
+Text GLabel 1950 5750 0    50   Input ~ 0
+MISO_3V3
+Text GLabel 1950 5850 0    50   Input ~ 0
+MOSI_3V3
+Text GLabel 1950 5650 0    50   Input ~ 0
+SCLK_3V3
+Text GLabel 1950 5950 0    50   Input ~ 0
+uC_CS_3V3
+Text GLabel 6600 1300 0    50   Input ~ 0
+UMW_CS_3V3
+Text GLabel 6600 2400 0    50   Input ~ 0
+BEW_CS_3V3
+Text GLabel 2450 1500 0    50   Input ~ 0
+SCLK_5V
+Text GLabel 2450 1600 0    50   Input ~ 0
+MISO_5V
+Text GLabel 2450 1700 0    50   Input ~ 0
+MOSI_5V
+Text GLabel 2450 1800 0    50   Input ~ 0
+uC_CS_5V
+Text GLabel 2450 1900 0    50   Input ~ 0
+IOE1_CS_5V
+Text GLabel 2450 2000 0    50   Input ~ 0
+IOE2_CS_5V
+Text GLabel 2450 2100 0    50   Input ~ 0
+UMW_CS_5V
+Text GLabel 2450 2200 0    50   Input ~ 0
+BEW_CS_5V
+Text GLabel 4100 5650 0    50   Input ~ 0
+WS2812b_3V3
+Text GLabel 6600 3400 0    50   Input ~ 0
+WS2812b_3V3
+Text GLabel 2450 2300 0    50   Input ~ 0
+WS2812b_5V
+Text GLabel 4100 5750 0    50   Input ~ 0
+Piezo_3V3
+Text GLabel 5100 5750 2    50   Input ~ 0
+Piezo_5V
+Text GLabel 2450 2400 0    50   Input ~ 0
+Piezo_5V
+Text GLabel 6600 2300 0    50   Input ~ 0
+Piezo_3V3
+Text GLabel 4150 2400 0    50   Input ~ 0
+EMPF_L
+Text GLabel 4150 2500 0    50   Input ~ 0
+EMPF_M
+Text GLabel 4150 2600 0    50   Input ~ 0
+EMPF_R
+Text GLabel 4150 3000 0    50   Input ~ 0
+EMPF_H
+Text GLabel 4150 2900 0    50   Input ~ 0
+Send_L
+Text GLabel 4150 2800 0    50   Input ~ 0
+Send_M
+Text GLabel 4150 2700 0    50   Input ~ 0
+Send_R
+Wire Wire Line
+	4150 2700 4200 2700
+Wire Wire Line
+	4200 2800 4150 2800
+Wire Wire Line
+	4150 2900 4200 2900
+Text GLabel 4150 1250 0    50   Input ~ 0
+STBY
+Text GLabel 4150 1350 0    50   Input ~ 0
+PWMA
+Text GLabel 4150 1550 0    50   Input ~ 0
+AIN1
+Text GLabel 4150 1650 0    50   Input ~ 0
+AIN2
+Text GLabel 4150 1450 0    50   Input ~ 0
+PWMB
+Text GLabel 4150 1750 0    50   Input ~ 0
+BIN1
+Text GLabel 4150 1850 0    50   Input ~ 0
+BIN2
+Text GLabel 4150 850  0    50   Input ~ 0
+Motor_A01
+Text GLabel 4150 950  0    50   Input ~ 0
+Motor_A02
+Text GLabel 4150 1050 0    50   Input ~ 0
+Motor_B01
+Text GLabel 4150 1150 0    50   Input ~ 0
+Motor_B02
+Wire Wire Line
+	4200 850  4150 850 
+Wire Wire Line
+	4150 950  4200 950 
+Wire Wire Line
+	4200 1050 4150 1050
+Wire Wire Line
+	4150 1150 4200 1150
+Wire Wire Line
+	4200 1250 4150 1250
+Wire Wire Line
+	4150 1350 4200 1350
+Wire Wire Line
+	4200 1450 4150 1450
+Wire Wire Line
+	4150 1550 4200 1550
+Wire Wire Line
+	4200 1650 4150 1650
+Wire Wire Line
+	4150 1750 4200 1750
+Wire Wire Line
+	4200 1850 4150 1850
+Text GLabel 6600 2500 0    50   Input ~ 0
+IOE2_CS_3V3
+Text GLabel 8850 1200 0    50   Input ~ 0
+IOE1_CS_3V3
+Text GLabel 8850 4050 0    50   Input ~ 0
+IOE2_CS_3V3
+Text GLabel 8850 4150 0    50   Input ~ 0
+SCLK_3V3
+Text GLabel 8850 1300 0    50   Input ~ 0
+SCLK_3V3
+Text GLabel 8850 1500 0    50   Input ~ 0
+MISO_3V3
+Text GLabel 8850 4350 0    50   Input ~ 0
+MISO_3V3
+Text GLabel 8850 1400 0    50   Input ~ 0
+MOSI_3V3
+Text GLabel 8850 4250 0    50   Input ~ 0
+MOSI_3V3
+Wire Wire Line
+	8900 1200 8850 1200
+Wire Wire Line
+	8850 1300 8900 1300
+Wire Wire Line
+	8900 1400 8850 1400
+Wire Wire Line
+	8850 1500 8900 1500
+Wire Wire Line
+	8900 4050 8850 4050
+Wire Wire Line
+	8850 4150 8900 4150
+Wire Wire Line
+	8900 4250 8850 4250
+Wire Wire Line
+	8850 4350 8900 4350
+Text GLabel 4100 5850 0    50   Input ~ 0
+US1_3V3
+Text GLabel 4100 5950 0    50   Input ~ 0
+US2_3V3
+Text GLabel 5100 5950 2    50   Input ~ 0
+US2_5V
+Text GLabel 5100 5850 2    50   Input ~ 0
+US1_5V
+Text GLabel 4100 6050 0    50   Input ~ 0
+SDA_3V3
+Text GLabel 4100 6150 0    50   Input ~ 0
+SCL_3V3
+Text GLabel 6600 2900 0    50   Input ~ 0
+SDA_3V3
+Text GLabel 6600 3000 0    50   Input ~ 0
+SCL_3V3
+Wire Wire Line
+	6600 2900 6700 2900
+Wire Wire Line
+	6600 3000 6700 3000
+Text GLabel 5100 6050 2    50   Input ~ 0
+SDA_5V
+Text GLabel 5100 6150 2    50   Input ~ 0
+SCL_5V
+$Sheet
+S 2550 3900 850  850 
+U 5E3B1757
+F0 "Speisung" 50
+F1 "Speisung.sch" 50
+F2 "D+" I L 2550 4000 50 
+F3 "D-" I L 2550 4100 50 
+F4 "3.3V" I L 2550 4200 50 
+F5 "1.8V" I L 2550 4300 50 
+F6 "5V" I L 2550 4400 50 
+F7 "GND" I L 2550 4500 50 
+$EndSheet
+$Comp
+L power:+5V #PWR?
+U 1 1 5E519EC3
+P 1900 4400
+F 0 "#PWR?" H 1900 4250 50  0001 C CNN
+F 1 "+5V" H 1915 4573 50  0000 C CNN
+F 2 "" H 1900 4400 50  0001 C CNN
+F 3 "" H 1900 4400 50  0001 C CNN
+	1    1900 4400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E51A561
+P 2200 4200
+F 0 "#PWR?" H 2200 4050 50  0001 C CNN
+F 1 "+3V3" H 2215 4373 50  0000 C CNN
+F 2 "" H 2200 4200 50  0001 C CNN
+F 3 "" H 2200 4200 50  0001 C CNN
+	1    2200 4200
+	-1   0    0    -1  
+$EndComp
+Text GLabel 2500 4100 0    50   Input ~ 0
+D-
+Text GLabel 2500 4000 0    50   Input ~ 0
+D+
+$Comp
+L power:+1V8 #PWR?
+U 1 1 5E5357D6
+P 2050 4300
+F 0 "#PWR?" H 2050 4150 50  0001 C CNN
+F 1 "+1V8" H 2065 4473 50  0000 C CNN
+F 2 "" H 2050 4300 50  0001 C CNN
+F 3 "" H 2050 4300 50  0001 C CNN
+	1    2050 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 4400 1900 4400
+Wire Wire Line
+	2050 4300 2550 4300
+Wire Wire Line
+	2550 4200 2200 4200
+$Comp
+L power:GND #PWR?
+U 1 1 5E56946E
+P 2350 4500
+F 0 "#PWR?" H 2350 4250 50  0001 C CNN
+F 1 "GND" H 2355 4327 50  0000 C CNN
+F 2 "" H 2350 4500 50  0001 C CNN
+F 3 "" H 2350 4500 50  0001 C CNN
+	1    2350 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 4500 2350 4500
+Wire Notes Line
+	4250 6900 4250 7650
+Wire Notes Line
+	4250 7650 5000 7650
+Wire Notes Line
+	5000 7650 5000 6900
+Wire Notes Line
+	5000 6900 4250 6900
+Text GLabel 5300 1350 0    50   Input ~ 0
+D-
+Text GLabel 5300 1250 0    50   Input ~ 0
+D+
+Wire Wire Line
+	5300 1250 5400 1250
+Wire Wire Line
+	5400 1350 5300 1350
+Wire Wire Line
+	2550 4000 2500 4000
+Wire Wire Line
+	2550 4100 2500 4100
+$Sheet
+S 5200 3550 750  1600
+U 5E5E2940
+F0 "Ausgabe" 50
+F1 "Ausgabe.sch" 50
+F2 "WS2812b" I L 5200 3650 50 
+F3 "Piezo" I L 5200 3750 50 
+F4 "LED1_LIN" I L 5200 3850 50 
+F5 "LED2_ROUT" I L 5200 3950 50 
+F6 "LED3" I L 5200 4050 50 
+F7 "LED4" I L 5200 4150 50 
+F8 "LED5" I L 5200 4250 50 
+F9 "LED6" I L 5200 4350 50 
+F10 "LED7_ROUT" I L 5200 4450 50 
+F11 "LED8_RIN" I L 5200 4550 50 
+F12 "US1" I L 5200 4650 50 
+F13 "US2" I L 5200 4750 50 
+$EndSheet
+Text GLabel 5100 3650 0    50   Input ~ 0
+WS2812b_5V
+Text GLabel 5100 3750 0    50   Input ~ 0
+Piezo_5V
+Text GLabel 5100 3850 0    50   Input ~ 0
+MUND1
+Text GLabel 5100 3950 0    50   Input ~ 0
+MUND2
+Text GLabel 5100 4050 0    50   Input ~ 0
+MUND3
+Text GLabel 5100 4150 0    50   Input ~ 0
+MUND4
+Text GLabel 5100 4250 0    50   Input ~ 0
+MUND5
+Text GLabel 5100 4350 0    50   Input ~ 0
+MUND6
+Text GLabel 5100 4450 0    50   Input ~ 0
+MUND7
+Text GLabel 5100 4550 0    50   Input ~ 0
+MUND8
+Text GLabel 5100 4750 0    50   Input ~ 0
+US2_5V
+Text GLabel 5100 4650 0    50   Input ~ 0
+US1_5V
+Wire Wire Line
+	5100 3650 5200 3650
+Wire Wire Line
+	5200 3750 5100 3750
+Wire Wire Line
+	5100 3850 5200 3850
+Wire Wire Line
+	5200 3950 5100 3950
+Wire Wire Line
+	5100 4050 5200 4050
+Wire Wire Line
+	5200 4150 5100 4150
+Wire Wire Line
+	5200 4250 5100 4250
+Wire Wire Line
+	5100 4350 5200 4350
+Wire Wire Line
+	5200 4450 5100 4450
+Wire Wire Line
+	5100 4550 5200 4550
+Wire Wire Line
+	5200 4650 5100 4650
+Wire Wire Line
+	5100 4750 5200 4750
+$Sheet
+S 5450 2150 550  650 
+U 5E70BF8D
+F0 "Sensoren" 50
+F1 "Sensoren.sch" 50
+F2 "MISO" I L 5450 2250 50 
+F3 "MOSI" I L 5450 2350 50 
+F4 "SCLK" I L 5450 2450 50 
+F5 "CS_ICM" I L 5450 2550 50 
+F6 "CS_BME" I L 5450 2650 50 
+$EndSheet
+Text GLabel 5350 2250 0    50   Input ~ 0
+MISO_3V3
+Text GLabel 5350 2350 0    50   Input ~ 0
+MOSI_3V3
+Text GLabel 5350 2450 0    50   Input ~ 0
+SCLK_3V3
+Text GLabel 5350 2650 0    50   Input ~ 0
+UMW_CS_3V3
+Text GLabel 5350 2550 0    50   Input ~ 0
+BEW_CS_3V3
+Wire Wire Line
+	5350 2250 5450 2250
+Wire Wire Line
+	5450 2350 5350 2350
+Wire Wire Line
+	5350 2450 5450 2450
+Wire Wire Line
+	5450 2550 5350 2550
+Wire Wire Line
+	5350 2650 5450 2650
+NoConn ~ 5100 6250
+NoConn ~ 5100 6350
+NoConn ~ 4100 6350
+NoConn ~ 4100 6250
+$EndSCHEMATC

@@ -1,0 +1,375 @@
+EESchema Schematic File Version 4
+LIBS:Motorstromüberwachung-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Motorstromüberwachung"
+Date "2019-11-18"
+Rev "1.0"
+Comp "PSI"
+Comment1 "DM13"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 5900 5200 0    50   ~ 0
+Spannung am + Eingang gross verstärkt, dass der FET normalerweise durchsteuert. \nSpannung am - Eingang so gross verstärken, dass ab 1A die Speisungsgranze\nunterschritten ist und der FET die Spannung regelt. Die für die Schwelle kann die -\nSignalverstärkung durch ein Poti geregelt werden.
+$Comp
+L Amplifier_Operational:TL071 U2
+U 1 1 5DD4B277
+P 7300 2850
+F 0 "U2" H 7644 2896 50  0000 L CNN
+F 1 "TL071" H 7644 2805 50  0000 L CNN
+F 2 "" H 7350 2900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7450 3000 50  0001 C CNN
+	1    7300 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR07
+U 1 1 5DD4B27D
+P 7200 2450
+F 0 "#PWR07" H 7200 2300 50  0001 C CNN
+F 1 "+5V" H 7215 2623 50  0000 C CNN
+F 2 "" H 7200 2450 50  0001 C CNN
+F 3 "" H 7200 2450 50  0001 C CNN
+	1    7200 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 2550 7200 2450
+NoConn ~ 7400 3150
+NoConn ~ 7300 3150
+$Comp
+L power:GND #PWR08
+U 1 1 5DD4C098
+P 7200 3250
+F 0 "#PWR08" H 7200 3000 50  0001 C CNN
+F 1 "GND" H 7205 3077 50  0000 C CNN
+F 2 "" H 7200 3250 50  0001 C CNN
+F 3 "" H 7200 3250 50  0001 C CNN
+	1    7200 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 3250 7200 3150
+$Comp
+L Device:R R10
+U 1 1 5DD52FDF
+P 6950 3200
+F 0 "R10" H 6880 3154 50  0000 R CNN
+F 1 "R" H 6880 3245 50  0000 R CNN
+F 2 "" V 6880 3200 50  0001 C CNN
+F 3 "~" H 6950 3200 50  0001 C CNN
+	1    6950 3200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Shunt R7
+U 1 1 5DD52FE5
+P 6250 3750
+F 0 "R7" V 6117 3750 50  0000 C CNN
+F 1 "R_Shunt" V 6026 3750 50  0000 C CNN
+F 2 "" V 6180 3750 50  0001 C CNN
+F 3 "~" H 6250 3750 50  0001 C CNN
+	1    6250 3750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5DD52FEB
+P 6750 2750
+F 0 "R8" V 6543 2750 50  0000 C CNN
+F 1 "R" V 6634 2750 50  0000 C CNN
+F 2 "" V 6680 2750 50  0001 C CNN
+F 3 "~" H 6750 2750 50  0001 C CNN
+	1    6750 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 5DD52FF1
+P 6750 2950
+F 0 "R9" V 6543 2950 50  0000 C CNN
+F 1 "R" V 6634 2950 50  0000 C CNN
+F 2 "" V 6680 2950 50  0001 C CNN
+F 3 "~" H 6750 2950 50  0001 C CNN
+	1    6750 2950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7000 2750 6950 2750
+Wire Wire Line
+	7000 2950 6950 2950
+Wire Wire Line
+	6950 3050 6950 2950
+Connection ~ 6950 2950
+Wire Wire Line
+	6950 2950 6900 2950
+$Comp
+L power:GND #PWR06
+U 1 1 5DD52FFC
+P 6950 3450
+F 0 "#PWR06" H 6950 3200 50  0001 C CNN
+F 1 "GND" H 6955 3277 50  0000 C CNN
+F 2 "" H 6950 3450 50  0001 C CNN
+F 3 "" H 6950 3450 50  0001 C CNN
+	1    6950 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 3450 6950 3350
+Wire Wire Line
+	6950 2750 6950 2150
+Wire Wire Line
+	6950 2150 7050 2150
+Connection ~ 6950 2750
+Wire Wire Line
+	6950 2750 6900 2750
+Wire Wire Line
+	6350 3600 6350 2950
+Wire Wire Line
+	6350 2950 6600 2950
+Wire Wire Line
+	6150 3600 6150 2750
+Wire Wire Line
+	6150 2750 6600 2750
+$Comp
+L power:+5V #PWR05
+U 1 1 5DD5300C
+P 5950 3750
+F 0 "#PWR05" H 5950 3600 50  0001 C CNN
+F 1 "+5V" H 5965 3923 50  0000 C CNN
+F 2 "" H 5950 3750 50  0001 C CNN
+F 3 "" H 5950 3750 50  0001 C CNN
+	1    5950 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 3750 5950 3750
+$Comp
+L Device:R R11
+U 1 1 5DD56564
+P 7200 2150
+F 0 "R11" V 6993 2150 50  0000 C CNN
+F 1 "R" V 7084 2150 50  0000 C CNN
+F 2 "" V 7130 2150 50  0001 C CNN
+F 3 "~" H 7200 2150 50  0001 C CNN
+	1    7200 2150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7350 2150 7650 2150
+Wire Wire Line
+	7650 2150 7650 2850
+Wire Wire Line
+	7600 2850 7650 2850
+$Comp
+L Amplifier_Operational:TL071 U3
+U 1 1 5DD676CE
+P 9000 2850
+F 0 "U3" H 9344 2896 50  0000 L CNN
+F 1 "TL071" H 9344 2805 50  0000 L CNN
+F 2 "" H 9050 2900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 9150 3000 50  0001 C CNN
+	1    9000 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR011
+U 1 1 5DD676D4
+P 8900 2450
+F 0 "#PWR011" H 8900 2300 50  0001 C CNN
+F 1 "+5V" H 8915 2623 50  0000 C CNN
+F 2 "" H 8900 2450 50  0001 C CNN
+F 3 "" H 8900 2450 50  0001 C CNN
+	1    8900 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 2550 8900 2450
+NoConn ~ 9100 3150
+NoConn ~ 9000 3150
+$Comp
+L power:GND #PWR012
+U 1 1 5DD676DD
+P 8900 3250
+F 0 "#PWR012" H 8900 3000 50  0001 C CNN
+F 1 "GND" H 8905 3077 50  0000 C CNN
+F 2 "" H 8900 3250 50  0001 C CNN
+F 3 "" H 8900 3250 50  0001 C CNN
+	1    8900 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 3250 8900 3150
+$Comp
+L Device:R R13
+U 1 1 5DD676E4
+P 8650 3200
+F 0 "R13" H 8580 3154 50  0000 R CNN
+F 1 "R" H 8580 3245 50  0000 R CNN
+F 2 "" V 8580 3200 50  0001 C CNN
+F 3 "~" H 8650 3200 50  0001 C CNN
+	1    8650 3200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 5DD676EA
+P 8450 2750
+F 0 "R12" V 8243 2750 50  0000 C CNN
+F 1 "R" V 8334 2750 50  0000 C CNN
+F 2 "" V 8380 2750 50  0001 C CNN
+F 3 "~" H 8450 2750 50  0001 C CNN
+	1    8450 2750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8700 2750 8650 2750
+Wire Wire Line
+	8700 2950 8650 2950
+Wire Wire Line
+	8650 3050 8650 2950
+Connection ~ 8650 2950
+Wire Wire Line
+	8650 2950 8600 2950
+$Comp
+L power:GND #PWR010
+U 1 1 5DD676FB
+P 8650 3450
+F 0 "#PWR010" H 8650 3200 50  0001 C CNN
+F 1 "GND" H 8655 3277 50  0000 C CNN
+F 2 "" H 8650 3450 50  0001 C CNN
+F 3 "" H 8650 3450 50  0001 C CNN
+	1    8650 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 3450 8650 3350
+Wire Wire Line
+	8650 2750 8650 2150
+Wire Wire Line
+	8650 2150 8750 2150
+Connection ~ 8650 2750
+Wire Wire Line
+	8650 2750 8600 2750
+Wire Wire Line
+	8000 3000 8150 3000
+Wire Wire Line
+	7850 2750 8300 2750
+$Comp
+L Device:R R14
+U 1 1 5DD67708
+P 8900 2150
+F 0 "R14" V 8693 2150 50  0000 C CNN
+F 1 "R" V 8784 2150 50  0000 C CNN
+F 2 "" V 8830 2150 50  0001 C CNN
+F 3 "~" H 8900 2150 50  0001 C CNN
+	1    8900 2150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9050 2150 9350 2150
+Wire Wire Line
+	9350 2150 9350 2850
+Wire Wire Line
+	9300 2850 9350 2850
+Wire Wire Line
+	7650 2850 7850 2850
+Wire Wire Line
+	7850 2850 7850 2750
+Connection ~ 7650 2850
+$Comp
+L Device:R_POT RV1
+U 1 1 5DD69A28
+P 8400 3000
+F 0 "RV1" V 8193 3000 50  0000 C CNN
+F 1 "R_POT" V 8284 3000 50  0000 C CNN
+F 2 "" H 8400 3000 50  0001 C CNN
+F 3 "~" H 8400 3000 50  0001 C CNN
+	1    8400 3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8400 3150 8150 3150
+Wire Wire Line
+	8150 3150 8150 3000
+Connection ~ 8150 3000
+Wire Wire Line
+	8150 3000 8250 3000
+$Comp
+L power:+5V #PWR09
+U 1 1 5DD6B08A
+P 8000 3000
+F 0 "#PWR09" H 8000 2850 50  0001 C CNN
+F 1 "+5V" H 8015 3173 50  0000 C CNN
+F 2 "" H 8000 3000 50  0001 C CNN
+F 3 "" H 8000 3000 50  0001 C CNN
+	1    8000 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 3000 8600 3000
+Wire Wire Line
+	8600 3000 8600 2950
+$Comp
+L Device:R R15
+U 1 1 5DD71ED0
+P 9800 3100
+F 0 "R15" H 9730 3054 50  0000 R CNN
+F 1 "R" H 9730 3145 50  0000 R CNN
+F 2 "" V 9730 3100 50  0001 C CNN
+F 3 "~" H 9800 3100 50  0001 C CNN
+	1    9800 3100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9800 3450 9800 3250
+Text GLabel 10100 3750 2    50   Input ~ 0
+VM
+Wire Wire Line
+	10000 3750 10100 3750
+Wire Notes Line
+	10100 3450 10750 3450
+Wire Notes Line
+	10750 3450 10750 4050
+Wire Notes Line
+	10750 4050 10100 4050
+Wire Notes Line
+	10100 3450 10100 4050
+Text Notes 10200 3600 0    50   ~ 0
+Motortreiber
+Wire Wire Line
+	9350 2850 9800 2850
+Wire Wire Line
+	9800 2850 9800 2950
+Connection ~ 9350 2850
+Wire Wire Line
+	6450 3750 9600 3750
+Wire Notes Line
+	5450 1350 5450 4650
+Wire Notes Line
+	5450 4650 11150 4650
+Wire Notes Line
+	11150 4650 11150 1350
+Wire Notes Line
+	11150 1350 5450 1350
+Text Notes 8050 1650 0    100  ~ 0
+Idee 2
+Text Notes 5600 4550 0    50   ~ 0
+Signal vergleichen und gleichzeitig verstärken. Dann wird diese Spannung von einer Referenzspannung abgezogen, die ebenso\nwie in Idee 1 verstärkt wird. 
+$Comp
+L Transistor_FET:2N7000 Q?
+U 1 1 5DD43119
+P 9800 3650
+F 0 "Q?" V 10150 3600 50  0000 L CNN
+F 1 "2N7000" V 10050 3500 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 10000 3575 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 9800 3650 50  0001 L CNN
+	1    9800 3650
+	0    1    1    0   
+$EndComp
+$EndSCHEMATC

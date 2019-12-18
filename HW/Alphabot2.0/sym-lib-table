@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Alphabot2.0-rescue)(type Legacy)(uri ${KIPRJMOD}/Alphabot2.0-rescue.lib)(options "")(descr ""))
+)
